@@ -1,0 +1,157 @@
+{
+  "env": {
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1",
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
+    "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1",
+    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
+    "USE_BUILTIN_RIPGREP": "0",
+    "ENABLE_TOOL_SEARCH": "true",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "Edit(*)",
+      "Write(*)",
+      "WebSearch(*)",
+      "NotebookEdit(*)",
+      "AskUserQuestion(*)",
+      "TaskOutput(*)",
+      "TaskStop(*)",
+      "Bash(BZL_TEST_RESULTS_VIEWER_ENABLED=true bzl:*)",
+      "Bash(bzl *)",
+      "Bash(tree *)",
+      "Bash(cat *)",
+      "Bash(ls **)",
+      "Bash(echo *)",
+      "Bash(wc *)",
+      "Bash(which *)",
+      "Bash(file *)",
+      "Bash(diff *)",
+      "Bash(jq *)",
+      "Bash(shellcheck *)",
+      "Bash(grep *)",
+      "Bash(terraform init *)",
+      "Bash(tr *)",
+      "Bash(lsof *)",
+      "Bash(head *)",
+      "Bash(xxd *)",
+      "Bash(git grep *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(git show *)",
+      "Bash(git remote *)",
+      "Bash(git rev-parse *)",
+      "Bash(git ls-files *)",
+      "Bash(git stash list *)",
+      "Bash(git check-ignore *)",
+      "Bash(git show-ref *)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr diff *)",
+      "Bash(gh repo view *)",
+      "Bash(gh pr checks *)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__atlassian__getAccessibleAtlassianResources",
+      "mcp__atlassian__searchConfluenceUsingCql",
+      "mcp__atlassian__getConfluencePage",
+      "mcp__atlassian__search",
+      "mcp__atlassian__getConfluenceSpaces",
+      "mcp__atlassian__getConfluencePageDescendants",
+      "mcp__atlassian__getPagesInConfluenceSpace",
+      "mcp__atlassian__getConfluencePageFooterComments",
+      "mcp__atlassian__getConfluencePageInlineComments",
+      "mcp__atlassian__getConfluenceCommentChildren",
+      "mcp__atlassian__getJiraIssue",
+      "mcp__atlassian__getVisibleJiraProjects",
+      "mcp__atlassian__searchJiraIssuesUsingJql",
+      "mcp__atlassian__getTransitionsForJiraIssue",
+      "mcp__atlassian__getJiraIssueRemoteIssueLinks",
+      "mcp__atlassian__getJiraIssueTypeMetaWithFields",
+      "mcp__atlassian__getJiraProjectIssueTypesMetadata",
+      "mcp__atlassian__getIssueLinkTypes",
+      "mcp__atlassian__atlassianUserInfo",
+      "mcp__atlassian__lookupJiraAccountId",
+      "mcp__atlassian__searchAtlassian"
+    ],
+    "ask": [
+      "Bash(sudo:*)",
+      "Bash(dd :*)",
+      "Bash(mkfs:*)",
+      "Bash(fdisk:*)",
+      "Bash(diskutil erase:*)",
+      "Bash(diskutil partitionDisk:*)",
+      "Bash(shutdown:*)",
+      "Bash(reboot:*)",
+      "Bash(nvram:*)",
+      "Bash(csrutil:*)",
+      "Bash(launchctl:*)",
+      "Bash(systemsetup:*)",
+      "Bash(networksetup:*)",
+      "Bash(rm -rf:*)",
+      "Bash(rm -fr:*)",
+      "Bash(rm -r :*)",
+      "Bash(chmod -R:*)",
+      "Bash(chown -R:*)",
+      "Bash(git push:*)",
+      "Bash(git remote add:*)",
+      "Bash(git remote remove:*)",
+      "Bash(git remote rm:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git remote rename:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -f:*)",
+      "Bash(git branch -D:*)",
+      "Bash(git checkout --:*)",
+      "Bash(git rebase:*)",
+      "Bash(git stash drop:*)",
+      "Bash(brew install:*)",
+      "Bash(npm install -g:*)",
+      "Bash(defaults write:*)"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' -message 'Input required' -sender com.anthropic.claudefordesktop -sound default"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "PATH=\"$HOME/.local/node/bin:$PATH\" npx -y ccstatusline@latest",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true,
+    "permissions-setup@mrlee-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "mrlee-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "DataDog/mrlee-plugins"
+      }
+    }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "autoUpdatesChannel": "stable",
+  "autoMemoryEnabled": true,
+  "autoDreamEnabled": true
+}
