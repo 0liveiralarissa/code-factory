@@ -153,5 +153,6 @@
   "effortLevel": "high",
   "autoUpdatesChannel": "stable",
   "autoMemoryEnabled": true,
-  "autoDreamEnabled": true
+  "autoDreamEnabled": true,
+  "defaultMode": "plan"
 }
