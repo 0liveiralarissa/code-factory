@@ -292,7 +292,7 @@ if command -v claude &>/dev/null; then
     else
         echo "  No marketplaces installed"
     fi
-    installed_plugins=$(claude plugin list --json 2>/dev/null | jq -r '.[].id' 2>/dev/null || true)
+    installed_plugins=$(claude plugin list --json 2>/dev/null | jq -r '.[] | select(.scope == "user") | .id' 2>/dev/null || true)
     if [[ -n "$installed_plugins" ]]; then
         while IFS= read -r plugin; do
             if claude plugin update "$plugin" 2>&1; then
