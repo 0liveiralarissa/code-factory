@@ -85,6 +85,7 @@
       "mcp__atlassian__atlassianUserInfo",
       "mcp__atlassian__lookupJiraAccountId",
       "mcp__atlassian__searchAtlassian",
+      "mcp__datadog__*",
       "mcp__datadog__get_*",
       "mcp__datadog__search_*",
       "mcp__datadog__list_*",
@@ -188,6 +189,7 @@
       }
     }
   },
+  "model": "opus",
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "autoUpdatesChannel": "stable",
